@@ -1,28 +1,28 @@
 <ion-content>
-  <ion-slides pager (ionSlideDidChange)="slideChanged()">
+  <ion-slides pager (ionSlideDidChange)="slideChanged()" (ionSlideDrag)="slideMoved()">
     <ion-slide>
       <div class="diag" style="background:url('assets/imgs/white.svg') no-repeat">
-        <ion-icon ios="ios-analytics" md="md-analytics" color="primary"></ion-icon>
+        <ion-icon ios="ios-analytics" md="md-analytics" color="primary" [@bounce]='state' (@bounce.done) ="animation"></ion-icon>
       </div>
-      <div>
+      <div [@bounce]='state' class="shadow">
         <h2>Track your routines</h2>
         <p>Lorem ipsum lorem ipsum lorem ipsum</p>
       </div>
     </ion-slide>
     <ion-slide>
       <div class="diag" style="background:url('assets/imgs/white.svg') no-repeat">
-        <ion-icon ios="ios-trophy" md="md-trophy" color="primary"></ion-icon>
+        <ion-icon ios="ios-trophy" md="md-trophy" color="primary" [@bounce]='state'></ion-icon>
       </div>
-      <div>
+      <div [@bounce]='state' class="shadow">
         <h2>Set Personal Goals</h2>
         <p>Lorem ipsum lorem ipsum lorem ipsum Lorem ipsum lorem ipsum lorem ipsum</p>
       </div>
     </ion-slide>
     <ion-slide>
       <div class="diag" style="background:url('assets/imgs/white.svg') no-repeat">
-        <ion-icon ios="ios-chatboxes" md="md-chatboxes" color="primary"></ion-icon>
+        <ion-icon ios="ios-chatboxes" md="md-chatboxes" color="primary" [@bounce]='state'></ion-icon>
       </div>
-      <div>
+      <div [@bounce]='state' class="shadow">
         <h2>Chat with others</h2>
         <p>Lorem ipsum lorem ipsum lorem ipsum</p>
       </div>
