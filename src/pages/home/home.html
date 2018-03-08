@@ -1,5 +1,5 @@
 <ion-content>
-  <ion-slides pager>
+  <ion-slides pager (ionSlideDidChange)="slideChanged()">
     <ion-slide>
       <div class="diag" style="background:url('assets/imgs/white.svg') no-repeat">
         <ion-icon ios="ios-analytics" md="md-analytics" color="primary"></ion-icon>
@@ -10,10 +10,23 @@
       </div>
     </ion-slide>
     <ion-slide>
-      2
+      <div class="diag" style="background:url('assets/imgs/white.svg') no-repeat">
+        <ion-icon ios="ios-trophy" md="md-trophy" color="primary"></ion-icon>
+      </div>
+      <div>
+        <h2>Set Personal Goals</h2>
+        <p>Lorem ipsum lorem ipsum lorem ipsum Lorem ipsum lorem ipsum lorem ipsum</p>
+      </div>
     </ion-slide>
     <ion-slide>
-      3
+      <div class="diag" style="background:url('assets/imgs/white.svg') no-repeat">
+        <ion-icon ios="ios-chatboxes" md="md-chatboxes" color="primary"></ion-icon>
+      </div>
+      <div>
+        <h2>Chat with others</h2>
+        <p>Lorem ipsum lorem ipsum lorem ipsum</p>
+      </div>
     </ion-slide>
   </ion-slides>
+  <button (click)="skip()" id="skip">{{ skipMsg }}</button>
 </ion-content>
