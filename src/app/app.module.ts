@@ -1,4 +1,3 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -7,16 +6,19 @@ import { AngularFireModule } from 'angularfire2';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { MainPage } from '../pages/main/main';
+import { LoginPage } from '../pages/login/login';
+import { RegisterPage } from '../pages/register/register';
 
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FIREBASE_CONFIG } from './app.firebase.config';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    MainPage
+    LoginPage,
+    RegisterPage
   ],
   imports: [
     BrowserModule,
@@ -27,7 +29,9 @@ import { FIREBASE_CONFIG } from './app.firebase.config';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    LoginPage,
+    RegisterPage
   ],
   providers: [
     StatusBar,

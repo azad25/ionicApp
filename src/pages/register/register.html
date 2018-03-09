@@ -15,4 +15,52 @@
 
 <ion-content padding>
 
+  <ion-item>
+    <ion-label floating>First Name</ion-label>
+    <ion-input type="text" [(ngModel)]="user.firstName"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Last Name</ion-label>
+    <ion-input type="text" [(ngModel)]="user.lastName"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Birthday</ion-label>
+    <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="user.birthday"></ion-datetime>
+  </ion-item>
+
+
+  <ion-list radio-group [(ngModel)]="user.gender">
+      <ion-item>
+          <ion-label>Gender</ion-label>
+        </ion-item>
+    <ion-item>
+      <ion-label>Male</ion-label>
+      <ion-radio value="male"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Female</ion-label>
+      <ion-radio value="female"></ion-radio>
+    </ion-item>
+  </ion-list>
+
+  <ion-item>
+    <ion-label floating>Email Address</ion-label>
+    <ion-input type="text" [(ngModel)]="user.email"></ion-input>
+  </ion-item>
+
+  <ion-item>
+      <ion-label floating>Password</ion-label>
+      <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Confirm Password</ion-label>
+    <ion-input type="password" id="confirmPass"></ion-input>
+  </ion-item>
+
+  <button ion-button (click)="register()">Register</button>
+
 </ion-content>

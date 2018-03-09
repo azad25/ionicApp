@@ -2,7 +2,7 @@
   <ion-slides pager (ionSlideDidChange)="slideChanged()" (ionSlideDrag)="slideMoved()">
     <ion-slide>
       <div class="diag" style="background:url('assets/imgs/white.svg') no-repeat">
-        <ion-icon ios="ios-analytics" md="md-analytics" color="primary" [@bounce]='state' (@bounce.done) ="animation"></ion-icon>
+        <ion-icon ios="ios-analytics" md="md-analytics" color="primary" [@bounce]='state' (@bounce.done) ="animationDone()"></ion-icon>
       </div>
       <div [@bounce]='state' class="shadow">
         <h2>Track your routines</h2>
